@@ -1,0 +1,48 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+table{
+    
+    width:100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+th{
+    background-color: rgb(117, 137, 31);
+    height: 50px;
+    color:white;
+    font-size: 20px;
+}
+td{
+    height: 30px;
+}
+tr:hover {background-color: coral;}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.table-data{
+    padding: 20px;
+}
+.btn{
+    margin-top: 30px;
+   
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+   
+}
+button{
+    padding: 10px;
+}
+
+
+
+
+

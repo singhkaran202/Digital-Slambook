@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/css/user-list.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="table-data">
+        <h1>USERS' DETAILS</h1>
+    
+            <table border="1">
+                <tr>
+                    <th>S.N</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Email Address</th>
+                    <th>Hostel</th>
+                </tr>
+                
+                <%
+                if(userData.length!=0){
+                var i=1;
+                userData.forEach(function(data){
+                %>
+                <tr>
+                    <td><%=i; %></td>
+                    <td><%=data.name %></td>
+                    <td><%=data.department %></td>
+                    <td><em><%=data.email_address %></em></td>
+                    <td><%=data.hostel %></td> 
+                
+                </tr>
+                <%  i++;}) %>
+                
+                <% } else{ %>
+                    <tr>
+                        <td colspan="7">No Data Found</td>
+                    </tr>
+                <% } %>
+            </table>
+            </div>
+            <div class="btn"><button><a href="//localhost:3000/dashboard/user-list/comments">Comments-Page</a></button></div>
+          
+
+</body>
+</html>

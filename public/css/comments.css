@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+table{
+    
+    width:80%;
+    border-collapse: collapse;
+    margin: 50px;
+}
+tr:hover {background-color: coral;}
+th{
+    background-color: rgb(40, 147, 147);
+    height: 40px;
+}
+td{
+    height: 30px;
+}
+h1{
+    margin: 40px auto;
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.input{
+    height: 100px;
+    width: 150px;
+    margin-left: 92px ;
+    margin-top: 20px;
+    
+}
+h2{
+    margin-top: 50px ;
+    text-align: center;
+}
+.addcomment{
+    margin-top: 0px;
+    padding: 40px;
+    background-color: aquamarine;
+}

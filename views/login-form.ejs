@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/login-form.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="login-form">
+  <h1>Login Form</h1>
+  
+<p><%=(typeof alertMsg!='undefined')? alertMsg:''%></p>
+<div>
+  <form method="post" action="/login">
+    <div><input class="form-container" type="email" placeholder="Email Address" name="email_address" required></div>
+    <div><input class="form-container" type="password" placeholder="Password" name="password" required></div>
+    <div><button type="submit">Login Now</button></div>
+    <button><a href="/register">New Registration</a></button>
+</div>
+   
+  </div>
+</form>
+</div>
+
+</body>
+</html>
