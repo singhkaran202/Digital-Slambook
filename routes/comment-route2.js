@@ -7,11 +7,15 @@ router.use(bodyParser.urlencoded({extended: true}))
 // to display registration form 
 
 router.get('/dashboard/user-list/comments', function(req, res, next) {
+   if (req.session.loggedinUser){
     var sql='SELECT * FROM comments1';
     db.query(sql, function (err, data, fields) {
     if (err) throw err;
     res.render('comments2', { userData: data});
   });
+  }else{
+    res.redirect('/login');
+  }
 });
 
 router.post('/dashboard/user-list/comments', function(req,res,next){
