@@ -21,8 +21,7 @@ inputData= {
     department:  req.body.department,
     email_address: req.body.email_address,
     hostel: req.body.hostel,
-    password: req.body.password,
-    confirm_password: req.body.confirm_password
+    password: req.body.password
 }
   
 
@@ -35,8 +34,6 @@ db.query(sql, [inputData.email_address] ,function (err, data, fields) {
  if(err) throw err
  if(data.length>1){
      var msg = inputData.email_address+ "was already exist";
-  //  }else if(inputData.confirm_password != inputData.password){
-    // var msg ="Password & Confirm Password is not Matched";
  }else{
    var password=inputData.password;
    var namee=inputData.namee;
@@ -49,10 +46,6 @@ db.query(sql, [inputData.email_address] ,function (err, data, fields) {
     var values = [[namee,department,email_address,hostel,hash]]
     db.query(sql,[values], function (err, inputData, fields) {
     if (err) throw err;
-      //   // save users data into database
-      //   var sql = 'INSERT INTO registration1 SET ?';
-      //  db.query(sql, inputData, function (err, data) {
-      //     if (err) throw err;
     });
     var msg ="You are successfully registered";
    });
