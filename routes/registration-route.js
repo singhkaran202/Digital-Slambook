@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var db=require('../database');//one folder back is there a database
-var bodyParser = require("body-parser")
-var bcrypt = require("bcrypt");
+const express = require('express');
+const router = express.Router();
+const db=require('../database');//one folder back is there a database
+const bodyParser = require("body-parser")
+const bcrypt = require("bcrypt");
 
 router.use(express.static(__dirname + '/public'));
 // to display registration form 
