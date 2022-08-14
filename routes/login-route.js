@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var db=require('../database');
-var bcrypt = require("bcrypt");
+const express = require('express');
+const router = express.Router();
+const db=require('../database');
+const bcrypt = require("bcrypt");
 
 router.use(express.static(__dirname + '/public'));
 /* GET users listing. */
