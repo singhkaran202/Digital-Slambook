@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var db=require('../database');
+const express = require('express');
+const router = express.Router();
+const db=require('../database');
 
 router.use(express.static(__dirname + '/public'));
 /* GET users listing. */
