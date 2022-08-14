@@ -1,7 +1,7 @@
-var session = require('express-session')
-var express = require("express")
+const session = require('express-session')
+const express = require("express")
 const app= express();
-var bodyParser = require("body-parser")
+const bodyParser = require("body-parser")
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
 
@@ -15,12 +15,12 @@ app.use(session({
     cookie: { maxAge: 60000 }
 }))
 
-var registrationRouter = require('./routes/registration-route');
-var loginRouter = require('./routes/login-route');
-var dashboardRouter = require('./routes/dashboard-route');
-var logoutRouter = require('./routes/logout-route');
-var usersRouter = require('./routes/users');
-var commentsRouter2 =require('./routes/comment-route2');
+const registrationRouter = require('./routes/registration-route');
+const loginRouter = require('./routes/login-route');
+const dashboardRouter = require('./routes/dashboard-route');
+const logoutRouter = require('./routes/logout-route');
+const usersRouter = require('./routes/users');
+const commentsRouter2 =require('./routes/comment-route2');
 
 app.use('/', registrationRouter);
 app.use('/', loginRouter);
