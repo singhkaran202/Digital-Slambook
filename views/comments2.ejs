@@ -11,17 +11,17 @@
 </head>
 <body>
     <div class="addcomment">
-        <h1>Add Comments</h1>
+        <h1 class="addcomment-heading">Add Comments</h1>
         <form action="/dashboard/user-list/comments" method="post">
-            <div class="email-ad">Comment To:<input type="email" name="email_address" placeholder="Email"></div>
+            <div class="email-ad"><strong>Comment To:</strong> <input type="email" name="email_address" placeholder="Email"></div>
             <div class="comment"> <input class="input" type="text" name="comment" placeholder="Add Comment here.....">
-            <button>Add</button></div>
+            <button><strong>Add</strong></button></div>
         </form>
     </div>
    
    
 <div class="table-data">
-<h2>Added Comments (sorted by time added)</h2>
+<h2 class="added-comments">Added Comments (sorted by time added)</h2>
     
  <table border="1">
       <tr>

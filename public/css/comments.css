@@ -6,22 +6,27 @@
 
 }
 table{
-    
+    background-color: rgb(202, 202, 234);
+    opacity: 0.7;
     width:80%;
     border-collapse: collapse;
     margin: 50px;
+   
 }
 tr:hover {background-color: coral;}
 th{
-    background-color: rgb(40, 147, 147);
+    color: black;
+    /* background-color: rgb(40, 147, 147);
+    opacity: 0.5; */
     height: 40px;
 }
 td{
     height: 30px;
 }
-h1{
+.addcomment-heading{
+    font-size: 50px;
     margin: 40px auto;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
     
 }
@@ -33,12 +38,20 @@ h1{
     margin-top: 20px;
     
 }
-h2{
-    margin-top: 50px ;
+.added-comments{
+    color: white;
+    margin: 50px ;
     text-align: center;
+    font-size: 40px;
 }
 .addcomment{
-    margin-top: 0px;
+    margin: 50px;
     padding: 40px;
-    background-color: aquamarine;
+    background-color: rgb(147, 170, 162);
+    opacity: 0.5;
+    border-radius: 10px;
+}
+body{
+    background-image: url(comment-page.jpg);
+    background-size: cover;
 }

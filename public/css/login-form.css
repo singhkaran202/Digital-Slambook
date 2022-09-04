@@ -1,17 +1,14 @@
 *{
     margin: 0px;
     padding:0px;
-    background-image: url(pat-whelen-FFDcZr49Dmw-unsplash\ \(1\).jpg);
-    background-repeat: repeat;
-    background-position: center; 
-
+    background-image: url(login.jpg);
+    background-size: cover;
     
 }
 .login-form{
     border: 2px solid black;
     border-radius: 2px;
     margin: 100px 400px;
-    /* background-color: beige; */
     text-align: center;
 }
 h1{

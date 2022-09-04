@@ -3,9 +3,8 @@
     margin: 0px;
     /* background-color: rgb(223, 223, 223); */
     background-image: url(sandra-grunewald-Efo9hZUwdSI-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-
+    
+    background-size: cover;
 }
 h1{
     text-align: center;
@@ -17,7 +16,6 @@ h1{
 form{
     padding: 10px;
     text-align: center;
-    /* background-color: rgb(223, 223, 223);    */
 }
 a{
     padding-bottom: 4px;

@@ -1,7 +1,6 @@
 {
   "name": "nodeapp",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,14 @@
     "express-session": "^1.17.3",
     "express-static": "^1.2.6",
     "mysql": "^2.18.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhkaran202/DeltaTask3-WebDev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/singhkaran202/DeltaTask3-WebDev/issues"
+  },
+  "homepage": "https://github.com/singhkaran202/DeltaTask3-WebDev#readme",
+  "description": ""
 }
