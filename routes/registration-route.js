@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 
 router.use(express.static(__dirname + '/public'));
 // to display registration form 
-router.get('/register', function(req, res, next) {
+router.get('/register', function(req, res) {
   res.render('registration-form');
 });
 
@@ -23,11 +23,6 @@ inputData= {
     hostel: req.body.hostel,
     password: req.body.password
 }
-  
-
-
-
-
 // check unique email address
 var sql='SELECT * FROM registration2 WHERE email_address =?';
 db.query(sql, [inputData.email_address] ,function (err, data, fields) {
