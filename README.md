@@ -1,10 +1,9 @@
-# DeltaTask3-WebDev
-# Comment-App
+# Digital-Slambook
 This web-app is made for Delta Inductions....
 <br>
 This is designed and developed with HTML, CSS and JavaScript.
 
-# Screenshot
+## Screenshot
 REGISTER PAGE:-
 <br> <br>
 ![Reg-image](./screenshots%20for%20readme%20of%20delta%20task3/Registration%20form.png)
