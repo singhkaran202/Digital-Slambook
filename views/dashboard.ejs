@@ -1,30 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
-    <title>Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+ 
+  <!-- Boxicons CDN Link -->
+  <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 </head>
-    <body>
-        <h1 class="heading">Hey!! Welcome to your Dashboard</h1>
-
-        <h2>Email of Logged User--> <em><%=email %></em></h2>
-        <p class="about"><strong>This website is made for commenting your thoughts, sharing love and happiness with mates and write your beautiful memories spent in the college</strong></p>
-        
-        <div class="btn1"><button class="comment"><a href="//localhost:3000/dashboard/user-list"><strong>Go to users</strong> </a></button></div> 
-        
-       
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <span class="logo_name">Digital Slambook</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href='/dashboard/user-list'>
+          <i class="bx bx-box"></i>
+          <span class="links_name">Users</span>
+        </a>
+      </li>
+      <li>
+        <a href='/dashboard/user-list/comments'>
+          <i class="bx bx-book-alt"></i>
+          <span class="links_name">Comments</span>
+        </a>
+      </li>
+      <!-- <li> -->
+        <!-- <a href='/community'>
+          <i class="bx bx-user"></i>
+          <span class="links_name">Community</span>
+        </a>
+      </li>
+      <li>
+        <a href='/chat'>
+          <i class="bx bx-message"></i>
+          <span class="links_name">Chat</span>
+        </a>
+      </li>
+      <li>
+        <a href='/rental'>
+          <i class="bx bx-cog"></i>
+          <span class="links_name">Rental</span>
+        </a>
+      </li> -->
+      <li class="log_out">
+        <a href='/'>
+          <i class="bx bx-log-out"></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class="bx bx-menu sidebarBtn"></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="profile-details">
     
-       <div class="btn2"><button class="link1"><a href="/logout" ><strong>Logout</strong> </a></button></div> 
+
+        
+        <%
+        if (userData.length != 0) {
+          userData.forEach(function (data) {
+        %>
+            <% if (data.email_address == email) { %>
+              <h4>
+                <p><%= data.name %></p>
+              </h4>
+            <% } %>
+        <%
+          });
+        } else {
+        %>
+          <h4>
+            <p>No Data Found</p>
+          </h4>
+        <%
+        }
+        %>
+        
 
 
 
-      
 
-    </body>
+
+
+        
+      </div>
+    </nav>
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic" style="text-align: center;">Profile</div>
+            <img src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg" style="height: 8em; padding-left: 2.5em;">
+            <div class="indicator">
+
+                        
+                <%
+                if (userData.length != 0) {
+                  userData.forEach(function (data) {
+                %>
+                    <% if (data.email_address == email) { %>
+                      <ul>
+                        <li><%= data.name %></li>
+                        <li><%= data.department %></li>
+                        <li><%= data.email_address %></li>
+                        <li><%= data.hostel %></li>
+                      </ul>
+                    <% } %>
+                <%
+                  });
+                } else {
+                %>
+                  <h4>
+                    <p>No Data Found</p>
+                  </h4>
+                <%
+                }
+                %>
+                
+                          
+                       
+                   
+                
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </section>
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function() {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+        sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else {
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      }
+    }
+  </script>
+</body>
 </html>

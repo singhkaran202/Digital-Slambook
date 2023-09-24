@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 router.use(express.static(__dirname + '/public'));
 /* GET users listing. */
 router.get('/login', function(req, res, next) {
-  res.render('login-form');
+  res.render('login');
 });
 
 router.post('/login', function(req, res){
@@ -27,12 +27,12 @@ router.post('/login', function(req, res){
                     res.redirect('/dashboard');
                }
               else{
-                res.render('login-form',{alertMsg:"Your password is wrong"});
+                res.render('login',{alertMsg:"Your password is wrong"});
                }
             });
         }
         else{
-            res.render('login-form',{alertMsg:"Your Email Address is wrong"});
+            res.render('login',{alertMsg:"Your Email Address is wrong"});
            }
 })
 });

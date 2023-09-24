@@ -8,10 +8,11 @@ router.use(bodyParser.urlencoded({extended: true}))
 
 router.get('/dashboard/user-list/comments', function(req, res, next) {
    if (req.session.loggedinUser){
-    var sql='SELECT * FROM comments1';
+    const email= req.session.emailAddress;
+    var sql='SELECT * FROM comments3';
     db.query(sql, function (err, data, fields) {
     if (err) throw err;
-    res.render('comments2', { userData: data});
+    res.render('comments2', { userData: data, email:email});
   });
   }else{
     res.redirect('/login');
@@ -20,11 +21,12 @@ router.get('/dashboard/user-list/comments', function(req, res, next) {
 
 router.post('/dashboard/user-list/comments', function(req,res,next){
     ourInputData = {
-                email_address:req.body.email_address,
+                email_address:req.session.emailAddress,
+                to_email_address:req.body.to_email_address,
                 comments: req.body.comment
             }
-            var sql="INSERT INTO comments1 (email_address,comments) VALUES ?"
-            var values = [[ourInputData.email_address,ourInputData.comments]]
+            var sql="INSERT INTO comments3 (email_address,to_email_address,comments) VALUES ?"
+            var values = [[ourInputData.email_address,ourInputData.to_email_address,ourInputData.comments]]
             db.query(sql,[values],function(err,ourInputData,fields){
                 if (err) throw (err);
             })

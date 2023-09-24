@@ -5,31 +5,36 @@
  
 }
 table{
-    background-color: seagreen;
-    opacity: 0.6;
+    background-color: rgb(208, 242, 223);
+    border: 8px solid white;
+    /* opacity: 0.5; */
     width:100%;
     border-collapse: collapse;
     text-align: center;
+    
 }
 th{
     
     height: 50px;
-    color:white;
+    color:rgb(0, 0, 0);
     font-size: 20px;
+    font-weight: 2000;
 }
 td{
-    height: 30px;
+    height: 50px;
+    font-weight: 2000;
+    font-size: 150%;
 }
 tr:hover {background-color: coral;}
 
 .user-heading{
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 30px;
     margin-top: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .table-data{
-    padding: 20px;
+    padding: 4% 5% 3% 5%;
 }
 .btn{
     margin-top: 5px;
@@ -37,18 +42,21 @@ tr:hover {background-color: coral;}
 }
 a{
     text-decoration: none;
-    color: black;
-
-   
+    color: rgb(111, 16, 118);
 }
 button{
     padding: 10px;
+    font-size: 200%;
 }
 body{
-    background-image: url(pattern.jpg);
+    /* background-image: url(img5.png); */
+    background-color: rgb(77, 250, 172);
     background-size: cover;
 }
-
+h1{
+    font-weight: 2000;
+    font-size: 300%;
+}
 
 
 

@@ -22,9 +22,10 @@
 DROP TABLE IF EXISTS `comments1`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `comments1` (
+CREATE TABLE `comments3` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `email_address` varchar(50) NOT NULL,
+  'email_address' varchar(50) NOT NULL,
+  `to_email_address` varchar(50) NOT NULL,
   `comments` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -34,11 +35,11 @@ CREATE TABLE `comments1` (
 -- Dumping data for table `comments1`
 --
 
-LOCK TABLES `comments1` WRITE;
+-- LOCK TABLES `comments1` WRITE;
 /*!40000 ALTER TABLE `comments1` DISABLE KEYS */;
-INSERT INTO `comments1` VALUES (1,'kdsr@gmail.com','Hello, I am Karan, I welcome you all to this beautiful website!!');
+-- INSERT INTO `comments1` VALUES (1,'kdsr@gmail.com','Hello, I am Karan, I welcome you all to this beautiful website!!');
 /*!40000 ALTER TABLE `comments1` ENABLE KEYS */;
-UNLOCK TABLES;
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `registration2`

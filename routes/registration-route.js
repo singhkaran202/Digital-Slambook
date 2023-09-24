@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 router.use(express.static(__dirname + '/public'));
 // to display registration form 
 router.get('/register', function(req, res) {
-  res.render('registration-form');
+  res.render('register');
 });
 
 router.use(bodyParser.urlencoded({extended: true}))
@@ -44,7 +44,7 @@ db.query(sql, [inputData.email_address] ,function (err, data, fields) {
     });
     var msg ="You are successfully registered";
    });
-   res.render('registration-form',{alertMsg:msg});
+   res.render('register',{alertMsg:msg});
  }
 });
 });
