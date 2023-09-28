@@ -15,7 +15,7 @@ router.get('/dashboard/user-list/comments', function(req, res, next) {
     res.render('comments2', { userData: data, email:email});
   });
   }else{
-    res.redirect('/login');
+    res.redirect('/');
   }
 });
 

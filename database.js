@@ -1,10 +1,10 @@
 var mysql = require('mysql');
 var conn = mysql.createConnection({
-  host: '127.0.0.1', // assign your host name
-  port: 3306,
-  user: 'root',      //  assign your database username
-  password: 'Karan@2125',      // assign your database password
-  database: 'userdb' // assign database Name
+  host: process.env.DB_HOST, // assign your host name
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,      //  assign your database username
+  password: process.env.DB_PASSWORD,      // assign your database password
+  database: process.env.DB // assign database Name
 }); 
 conn.connect(function(err) {
   if (err) throw err;

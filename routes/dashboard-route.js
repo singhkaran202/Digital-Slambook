@@ -13,7 +13,7 @@ router.get('/dashboard', function(req, res, next) {
         res.render('dashboard',{userData: data, email: email});
         });
     }else{
-        res.redirect('/login');
+        res.redirect('/');
     }
 });
 module.exports = router;

@@ -2,6 +2,12 @@ const session = require('express-session')
 const express = require("express")
 const app= express();
 const bodyParser = require("body-parser")
+
+
+require('dotenv').config();
+
+const PORT = process.env.PORT || 3030;
+
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
 
@@ -9,7 +15,7 @@ app.set('view engine','ejs')
 // application.use(cookieParser())
 
 app.use(session({
-    secret: '123456cat',
+    secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: true,
     cookie: { maxAge: 60000 }
@@ -30,6 +36,6 @@ app.use('/', usersRouter)//try writing dashboard once......also /
 app.use('/',commentsRouter2)
 
 
-app.listen(3000,function(){
-    console.log("server is running.....")
+app.listen(PORT,function(){
+    console.log(`server is running on port ${PORT}`);
 })

@@ -3,6 +3,6 @@ const router = express.Router();
 /* GET users listing. */
 router.get('/logout', function(req, res) {
   req.session.destroy();
-  res.redirect('/login');
+  res.redirect('/');
 });
 module.exports = router;

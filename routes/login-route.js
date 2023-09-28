@@ -5,11 +5,11 @@ const bcrypt = require("bcrypt");
 
 router.use(express.static(__dirname + '/public'));
 /* GET users listing. */
-router.get('/login', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.render('login');
 });
 
-router.post('/login', function(req, res){
+router.post('/', function(req, res){
     var emailAddress = req.body.email_address;
     var password = req.body.password;
     var hash =bcrypt.hash(password,10);

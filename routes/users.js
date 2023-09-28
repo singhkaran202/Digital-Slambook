@@ -12,7 +12,7 @@ router.get('/dashboard/user-list', function(req, res, next) {
     res.render('user-list', { userData: data});
   });
   }else{
-    res.redirect('/login');
+    res.redirect('/');
   }
   
 });
