@@ -3,6 +3,7 @@ const express = require("express")
 const app= express();
 const bodyParser = require("body-parser")
 
+const MySQLStore = require('express-mysql-session')(session);
 
 require('dotenv').config();
 
@@ -14,8 +15,29 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine','ejs')
 // application.use(cookieParser())
 
+
+const options = {
+	host: process.env.DB_HOST,
+	port: process.env.DB_PORT,
+	user: process.env.DB_USER,
+	password: process.env.DB_PASSWORD,
+	database: process.env.DB,
+	// createDatabaseTable: false,
+	// schema: {
+	// 	tableName: 'custom_sessions_table_name',
+	// 	columnNames: {
+	// 		session_id: 'custom_session_id',
+	// 		expires: 'custom_expires_column_name',
+	// 		data: 'custom_data_column_name'
+	// 	}
+	// }
+};
+
+const sessionStore = new MySQLStore(options);
+
 app.use(session({
     secret: process.env.SECRET_KEY,
+    store: sessionStore,
     resave: false,
     saveUninitialized: true,
     cookie: { maxAge: 60000 }
